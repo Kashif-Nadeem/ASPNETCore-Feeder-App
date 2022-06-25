@@ -15,18 +15,18 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
+#- task: NuGetToolInstaller@1
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
+#- task: NuGetCommand@2
+#  inputs:
+#    restoreSolution: '$(solution)'
 
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+#- task: VSBuild@1
+#  inputs:
+#    solution: '$(solution)'
+#    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
 
 #- task: VSTest@2
 #  inputs:
@@ -38,7 +38,7 @@ steps:
 # Execute PowerShell scripts on remote machines using PSSession and Invoke-Command for remoting
 - task: PowerShellOnTargetMachines@3
   inputs:
-    machines: 20.219.110.213:5985
+    machines: 20.219.110.213:5986
     userName: kashif
     userPassword: Kashif-1234567
     scriptType: 'Inline' # Optional. Options: filePath, inline
