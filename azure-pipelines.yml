@@ -43,15 +43,6 @@ steps:
     userPassword: Kashif-1234567
     scriptType: 'filePath' # Optional. Options: filePath, inline
     scriptPath: 'C:\Users\kashif\Documents\VersionScript.ps1' # Required when scriptType == FilePath
-    inlineScript: Invoke-Command -ScriptBlock { $PSVersionTable } # Required when scriptType == Inline
-    #scriptArguments: # Optional
-    #initializationScript: # Optional
-    #sessionVariables: # Optional
+    #inlineScript: Invoke-Command -ScriptBlock { $PSVersionTable } # Required when scriptType == Inline
     communicationProtocol: 'Https' # Optional. Options:# http, https
     authenticationMechanism: 'Default' # Optional. Options: #default, credssp
-    #newPsSessionOptionArguments: '-SkipCACheck -IdleTimeout 7200000 -OperationTimeout 0 -OutputBufferingMode Block' # Optional
-    #errorActionPreference: 'stop' # Optional. Options: stop, continue, silentlyContinue
-    #failOnStderr: false # Optional
-    #ignoreLASTEXITCODE: false # Optional
-    #workingDirectory: # Optional
-    #runPowershellInParallel: true # Optional
