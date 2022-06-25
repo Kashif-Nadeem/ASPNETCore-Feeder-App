@@ -38,7 +38,7 @@ steps:
 # Execute PowerShell scripts on remote machines using PSSession and Invoke-Command for remoting
 - task: PowerShellOnTargetMachines@3
   inputs:
-    machines: 20.219.110.213:5986
+    machines: 20.219.110.213
     userName: kashif
     userPassword: Kashif-1234567
     scriptType: 'Inline' # Optional. Options: filePath, inline
