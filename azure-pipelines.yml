@@ -43,7 +43,7 @@ steps:
     userPassword: Kashif-1234567
     scriptType: 'Inline' # Optional. Options: filePath, inline
     #scriptPath: # Required when scriptType == FilePath
-    inlineScript: Invoke-Command -Session $session -ScriptBlock { $PSVersionTable } # Required when scriptType == Inline
+    inlineScript: Invoke-Command -ScriptBlock { $PSVersionTable } # Required when scriptType == Inline
     #scriptArguments: # Optional
     #initializationScript: # Optional
     #sessionVariables: # Optional
