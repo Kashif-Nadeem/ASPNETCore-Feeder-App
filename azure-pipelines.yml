@@ -28,17 +28,17 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+#- task: VSTest@2
+#  inputs:
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
 
 
 # PowerShell on target machines
 # Execute PowerShell scripts on remote machines using PSSession and Invoke-Command for remoting
 - task: PowerShellOnTargetMachines@3
   inputs:
-    machines: 13.71.85.62:5986
+    machines: 20.219.110.213:5986
     userName: kashif
     userPassword: Kashif-1234567
     scriptType: 'Inline' # Optional. Options: filePath, inline
