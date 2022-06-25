@@ -47,8 +47,8 @@ steps:
     #scriptArguments: # Optional
     #initializationScript: # Optional
     #sessionVariables: # Optional
-    communicationProtocol: 'Https' # Optional. Options: http, https
-    authenticationMechanism: 'Default' # Optional. Options: default, credssp
+    communicationProtocol: 'Https' # Optional. Options:# http, https
+    authenticationMechanism: 'Default' # Optional. Options: #default, credssp
     #newPsSessionOptionArguments: '-SkipCACheck -IdleTimeout 7200000 -OperationTimeout 0 -OutputBufferingMode Block' # Optional
     #errorActionPreference: 'stop' # Optional. Options: stop, continue, silentlyContinue
     #failOnStderr: false # Optional
