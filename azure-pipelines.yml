@@ -41,8 +41,8 @@ steps:
     machines: winserver.southindia.cloudapp.azure.com:5986
     userName: kashif
     userPassword: Kashif-1234567
-    scriptType: 'Inline' # Optional. Options: filePath, inline
-    #scriptPath: # Required when scriptType == FilePath
+    scriptType: 'filePath' # Optional. Options: filePath, inline
+    scriptPath: 'C:\Users\kashif\Documents\VersionScript.ps1' # Required when scriptType == FilePath
     inlineScript: Invoke-Command -ScriptBlock { $PSVersionTable } # Required when scriptType == Inline
     #scriptArguments: # Optional
     #initializationScript: # Optional
