@@ -32,3 +32,26 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+
+# PowerShell on target machines
+# Execute PowerShell scripts on remote machines using PSSession and Invoke-Command for remoting
+- task: PowerShellOnTargetMachines@3
+  inputs:
+    machines: 13.71.85.62:5986
+    userName: kashif
+    userPassword: Kashif-1234567
+    scriptType: 'Inline' # Optional. Options: filePath, inline
+    #scriptPath: # Required when scriptType == FilePath
+    inlineScript: Invoke-Command -Session $session -ScriptBlock { $PSVersionTable } # Required when scriptType == Inline
+    #scriptArguments: # Optional
+    #initializationScript: # Optional
+    #sessionVariables: # Optional
+    communicationProtocol: 'Https' # Optional. Options: http, https
+    authenticationMechanism: 'Default' # Optional. Options: default, credssp
+    #newPsSessionOptionArguments: '-SkipCACheck -IdleTimeout 7200000 -OperationTimeout 0 -OutputBufferingMode Block' # Optional
+    #errorActionPreference: 'stop' # Optional. Options: stop, continue, silentlyContinue
+    #failOnStderr: false # Optional
+    #ignoreLASTEXITCODE: false # Optional
+    #workingDirectory: # Optional
+    #runPowershellInParallel: true # Optional
