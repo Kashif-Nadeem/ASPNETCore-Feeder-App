@@ -5,7 +5,7 @@
 
 ## Global variables
 
-$AccessToken = "dapi03bd06d1400fa3b84c65626ecda45a8e-2"
+$AccessToken = ""
 $Region = "centralus"
 $csvFile = ".\AADGroups.csv"
 
